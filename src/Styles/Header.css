@@ -1,0 +1,25 @@
+/* header /////////////////////////////////////// */
+.navbar{
+    background-image: url("https://img.freepik.com/free-photo/old-grunge-dark-textured-wooden-background_7182-1539.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    border: 3px solid black;
+  }
+  
+  .logo{
+    padding-left: 60px;
+    padding-bottom: 10px;
+    height: 80px;
+  }
+  
+  .login{
+    text-align: end;
+    color: white;
+    padding-right: 40px;
+    padding-bottom: 20px;
+  }
+  
+  /* header /////////////////////////////////////// */

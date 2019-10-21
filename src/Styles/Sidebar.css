@@ -1,0 +1,65 @@
+.sidebar {
+  background-image: url("https://img.wallpaper.sc/iphonexsmax/images/1242x2688/iPhoneXSMax-1242x2688-wallpaper_01182.jpg");
+  background-repeat: no-repeat;
+}
+
+.sidebar-scrollview {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.filter-by {
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  border-radius: 3px;
+
+  color: burlywood;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.sidebar-buttons {
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: burlywood;
+  border: 3px solid burlywood;
+
+  font-size: 30px;
+  color: maroon;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.sidebar-buttons:hover {
+  color: burlywood;
+  background-color: maroon;
+}
+
+.sidebar-innerbuttons {
+  text-align: center;
+  height: 40px;
+  margin: 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+  background-color: rgb(247, 221, 188);
+  border: 3px solid burlywood;
+
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+
+  font-size: 19px;
+  color: maroon;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.sidebar-innerbuttons:hover {
+  color: burlywood;
+  background-color: maroon;
+}

@@ -1,22 +1,70 @@
-.App {
-  text-align: center;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-}
+.main-container-loading {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://s3.amazonaws.com/user-media.venngage.com/299799-53374269481033ba23118a23eb394d20.jpg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  height: 55vmax;
+  background-size: cover;
+  width: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+Spinner {
+  align-self: center;
+}
+
+.main-container {
+  /* margin: 0;
+  padding: 0; */
+  background-image: url("https://s3.amazonaws.com/user-media.venngage.com/299799-53374269481033ba23118a23eb394d20.jpg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+  height: 55vmax;
+  background-size: cover;
+  width: 100%;
+}
+
+.middle-container {
+  margin-top: 25px;
+  height: 55vmax;
+  width: 100%;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.middle-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+.card-container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
+  padding-bottom: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+  transition-duration: 300ms;
 }
