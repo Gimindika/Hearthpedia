@@ -33,6 +33,12 @@ class Header extends React.Component {
     }
   };
 
+  costHandler = cost => {
+    if (!this.props.isLoading) {
+      this.props.setFilter("cost", cost);
+    }
+  };
+
   rarityHandler = rarity => {
     if (!this.props.isLoading) {
       this.props.setFilter("rarity", rarity);
@@ -85,18 +91,20 @@ class Header extends React.Component {
             </div>
           </Col>
 
-          {/* <Col>
+          <Col>
             <div className="filter-container">
               <img
                 className="filter-icon"
                 src={require("../images/mana.png")}
                 alt="mana"
               />
-              <input className="minmax-input" />
-              <p className="minmax-separator"> ~ </p>
-              <input className="minmax-input" />
+              <p className="minmax-separator"> : </p>
+              <input
+                className="minmax-input"
+                onChange={event => this.costHandler(event.target.value)}
+              />
             </div>
-          </Col> */}
+          </Col>
 
           <Col className="col-lg-3 ml-auto">
             <DebounceInput

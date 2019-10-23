@@ -12,50 +12,8 @@ export const getAllCards = (query) => {
   return {
     type: "GET_ALL_CARDS",
     // payload: Axios.get(`${url}/cards/`, header)
-    payload: Axios.get(`http://localhost:5000/api/cards?page=${query}`)
+    payload: Axios.get(`http://54.235.224.136:4000/api/cards?page=${query}`)
 
-  };
-};
-
-export const getCardsBySet = set => {
-  return {
-    type: "GET_CARDS_BY_SET",
-    payload: Axios.get(`${url}/cards/sets/${set}`, header)
-  };
-};
-
-export const getCardsByClass = _class => {
-  return {
-    type: "GET_CARDS_BY_CLASS",
-    payload: Axios.get(`${url}/cards/classes/${_class}`, header)
-  };
-};
-
-export const getCardsByRace = race => {
-  return {
-    type: "GET_CARDS_BY_RACE",
-    payload: Axios.get(`${url}/cards/races/${race}`, header)
-  };
-};
-
-export const getCardsByFaction = faction => {
-  return {
-    type: "GET_CARDS_BY_FACTION",
-    payload: Axios.get(`${url}/cards/factions/${faction}`, header)
-  };
-};
-
-export const getCardsByType = type => {
-  return {
-    type: "GET_CARDS_BY_TYPE",
-    payload: Axios.get(`${url}/cards/types/${type}`, header)
-  };
-};
-
-export const getCardsByRarity = rarity => {
-  return {
-    type: "GET_CARDS_BY_RARITY",
-    payload: Axios.get(`${url}/cards/qualities/${rarity}`, header)
   };
 };
 

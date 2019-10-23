@@ -27,6 +27,7 @@ class App extends React.Component {
       playerClass: "",
       health: "",
       attack: "",
+      cost: "",
       race: ""
     },
 
@@ -61,6 +62,7 @@ class App extends React.Component {
         playerClass: "",
         health: "",
         attack: "",
+        cost: "",
         race: ""
       }
     });

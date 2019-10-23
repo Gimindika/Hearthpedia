@@ -1,14 +1,49 @@
 .modal-parent {
   margin: auto auto;
-  width: 60vw;
-  height: 80vh;
+  /* width: 60vw;
+  height: 80vh; */
 }
 
 .modal-container {
   background-image: url("https://s3.amazonaws.com/user-media.venngage.com/299799-53374269481033ba23118a23eb394d20.jpg");
+  /* background-color: burlywood; */
+  /* border-radius: 15px; */
+  /* border: 10px solid maroon; */
   background-repeat: no-repeat;
-  object-fit: fill;
+  background-size: contain;
+  width: 875px;
+  height: 700px;
 
-  width: 55vw;
-  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  padding:0;
+}
+
+.details-container{
+  padding-top: 20px;
+  width:500px;
+  line-height: 1.25;
+}
+
+.details-name{
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.details-icons{
+  width: 20px;
+  height: 20px;
+}
+
+.details-artist{
+  text-align: end;
 }
