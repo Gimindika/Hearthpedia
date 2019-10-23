@@ -20,6 +20,7 @@
   font-weight: 600;
 }
 
+
 .sidebar-buttons {
   text-align: center;
   height: 50px;
@@ -47,7 +48,7 @@
   border-radius: 5px;
   background-color: rgb(247, 221, 188);
   border: 3px solid burlywood;
-
+  width:14vw ;
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -61,5 +62,16 @@
 
 .sidebar-innerbuttons:hover {
   color: burlywood;
+  background-color: maroon;
+}
+
+.sidebar-classinnerbuttons {
+  border-radius: 5px;
+  background-color: rgb(247, 221, 188);
+  border: 3px solid burlywood;
+
+}
+
+.sidebar-classinnerbuttons:hover {
   background-color: maroon;
 }

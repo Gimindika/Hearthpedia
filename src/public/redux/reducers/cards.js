@@ -1,5 +1,7 @@
 const initialState = {
+  card: {},
   cards: [],
+  allCard: [],
   isLoading: false,
   isFullfiled: false,
   isRejected: false
@@ -21,23 +23,26 @@ const cards = (state = initialState, action) => {
         isRejected: true
       };
     case "GET_ALL_CARDS_FULFILLED":
-      let set;
-      let allCard = [];
-      for (set in action.payload.data) {
-        action.payload.data[set].map(card => {
-          if (card.img) {
-            if (card.collectible) {
-              allCard.push(card);
-            }
-          }
-        });
-      }
+      // let set;
+      // let allCard = [];
+      // for (set in action.payload.data) {
+      //   action.payload.data[set].map(card => {
+      //     if (card.img) {
+      //       if (card.collectible) {
+      //         allCard.push(card);
+      //       }
+      //     }
+      //     return null;
+      //   });
+      // }
       return {
         ...state,
         isLoading: false,
         isRejected: false,
         isFullfiled: true,
-        cards: allCard
+        // allCard: allCard,
+        // cards: allCard,
+        cards: action.payload.data.response
       };
 
     case "GET_CARDS_BY_SET_PENDING":
@@ -61,6 +66,7 @@ const cards = (state = initialState, action) => {
             cardsBySet.push(card);
           }
         }
+        return null;
       });
       return {
         ...state,
@@ -91,6 +97,7 @@ const cards = (state = initialState, action) => {
             cardsByClass.push(card);
           }
         }
+        return null;
       });
       return {
         ...state,
@@ -121,6 +128,7 @@ const cards = (state = initialState, action) => {
             cardsByRace.push(card);
           }
         }
+        return null;
       });
       return {
         ...state,
@@ -151,6 +159,7 @@ const cards = (state = initialState, action) => {
             cardsByFaction.push(card);
           }
         }
+        return null;
       });
       return {
         ...state,
@@ -181,6 +190,7 @@ const cards = (state = initialState, action) => {
             cardsByType.push(card);
           }
         }
+        return null;
       });
       return {
         ...state,
@@ -188,6 +198,59 @@ const cards = (state = initialState, action) => {
         isRejected: false,
         isFullfiled: true,
         cards: cardsByType
+      };
+
+    case "GET_CARDS_BY_RARITY_PENDING":
+      return {
+        ...state,
+        isLoading: true,
+        isRejected: false,
+        isFullfiled: false
+      };
+    case "GET_CARDS_BY_RARITY_REJECTED":
+      return {
+        ...state,
+        isLoading: false,
+        isRejected: true
+      };
+    case "GET_CARDS_BY_RARITY_FULFILLED":
+      let cardsByRarity = [];
+      action.payload.data.map(card => {
+        if (card.img) {
+          if (card.collectible) {
+            cardsByRarity.push(card);
+          }
+        }
+        return null;
+      });
+      return {
+        ...state,
+        isLoading: false,
+        isRejected: false,
+        isFullfiled: true,
+        cards: cardsByRarity
+      };
+
+    case "GET_CARD_BY_ID_PENDING":
+      return {
+        ...state,
+        isLoading: true,
+        isRejected: false,
+        isFullfiled: false
+      };
+    case "GET_CARD_BY_ID_REJECTED":
+      return {
+        ...state,
+        isLoading: false,
+        isRejected: true
+      };
+    case "GET_CARD_BY_ID_FULFILLED":
+      return {
+        ...state,
+        isLoading: false,
+        isRejected: false,
+        isFullfiled: true,
+        card: action.payload.data[0]
       };
 
     default:

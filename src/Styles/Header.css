@@ -1,25 +1,141 @@
 /* header /////////////////////////////////////// */
-.navbar{
-    background-image: url("https://img.freepik.com/free-photo/old-grunge-dark-textured-wooden-background_7182-1539.jpg?size=626&ext=jpg");
-    background-repeat: no-repeat;
-   background-size: cover;
-    display: flex;
-    flex-direction: row;
-    height: 80px;
-    border: 3px solid black;
-  }
-  
-  .logo{
-    padding-left: 60px;
-    padding-bottom: 10px;
-    height: 80px;
-  }
-  
-  .login{
-    text-align: end;
-    color: white;
-    padding-right: 40px;
-    padding-bottom: 20px;
-  }
-  
-  /* header /////////////////////////////////////// */
+.navbar {
+  background-image: url("https://img.freepik.com/free-photo/old-grunge-dark-textured-wooden-background_7182-1539.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  border: 3px solid black;
+  justify-content: space-around;
+}
+
+.logo {
+  padding-left: 60px;
+  padding-bottom: 10px;
+  height: 80px;
+}
+
+
+
+.filter-container{
+  background-color: burlywood;
+  width: 150px;
+  height: 70px;
+  padding:10px;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.filter-icon{
+  width: 50px;
+  height: 50px;
+}
+.minmax-input{
+  width: 50px;
+  height: 50px;
+  margin:5px;
+  margin-top: 0px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  color: maroon;
+}
+.minmax-separator{
+  font-size: 20px;
+  font-weight: 800;
+  margin: 5px;
+}
+
+.search-bar {
+  height: 50px;
+  margin: 10px;
+  border-radius: 3px;
+  padding: 10px;
+  width: 15vw;
+  align-self: flex-end;
+
+
+  color: maroon;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+
+.dropdown-buttons {
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: burlywood;
+  border: 3px solid burlywood;
+
+  font-size: 30px;
+  color: maroon;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.dropdown-buttons:hover {
+  color: burlywood;
+  background-color: maroon;
+}
+
+.dropdown-innerbuttons {
+  text-align: center;
+  height: 40px;
+  margin: 8px;
+  margin-top: 0px;
+  border-radius: 5px;
+  background-color: rgb(247, 221, 188);
+  border: 3px solid burlywood;
+  width:14vw ;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+
+  font-size: 19px;
+  color: maroon;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.dropdown-innerbuttons:hover {
+  color: burlywood;
+  background-color: maroon;
+}
+
+.login {
+  text-align: end;
+  color: white;
+  /* padding-right: 40px; */
+  /* padding-bottom: 20px; */
+}
+
+.login-button {
+  text-align: center;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: burlywood;
+  border: 3px solid burlywood;
+
+  font-size: 25px;
+  color: maroon;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.login-button:hover {
+  color: burlywood;
+  background-color: #800000;
+}
+
+
+/* header /////////////////////////////////////// */

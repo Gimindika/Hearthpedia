@@ -1,16 +1,8 @@
 import React from "react";
-import { Accordion, useAccordionToggle, Card, Col } from "react-bootstrap";
+import { Accordion, useAccordionToggle, Col } from "react-bootstrap";
 import "../Styles/Sidebar.css";
 
 import { connect } from "react-redux";
-import {
-  getCardsBySet,
-  getAllCards,
-  getCardsByClass,
-  getCardsByRace,
-  getCardsByFaction,
-  getCardsByType
-} from "../public/redux/actions/cards";
 
 function CustomToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionToggle(eventKey, () =>
@@ -52,36 +44,70 @@ class Sidebar extends React.Component {
     "Kobolds & Catacombs"
   ];
 
-  setListHandler = async set => {
-    await this.props.dispatch(getCardsBySet(set));
+  setListHandler =  set => {
+    this.props.setFilter("cardSet", set);
   };
 
   classList = [
-    "Priest",
-    "Warrior",
-    "Mage",
-    "Shaman",
-    "Paladin",
-    "Hunter",
-    "Warlock",
-    "Rogue",
-    "Druid"
+    {
+      name: "Priest",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/23/Icon_Priest_64.png?version=ebbdfd4d3aea21e56c2bf01cd17cd0b9"
+    },
+    {
+      name: "Warrior",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/1/19/Icon_Warrior_64.png?version=3b06eb317c38ddfdf5b80ff07323944b"
+    },
+    {
+      name: "Mage",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/f/f2/Icon_Mage_64.png?version=c44fe389911609ee8ef8b84fa579c375"
+    },
+    {
+      name: "Shaman",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/a/a8/Icon_Shaman_64.png?version=11aa74dd8178410e7b01a1599c4b60b2"
+    },
+    {
+      name: "Paladin",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/7b/Icon_Paladin_64.png?version=c461393966e4643dbf920a37972669d0"
+    },
+    {
+      name: "Hunter",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/f/f4/Icon_Hunter_64.png?version=07fcd83fa04f07fe460ef796017c7f42"
+    },
+    {
+      name: "Warlock",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2e/Icon_Warlock_64.png?version=4ac840bd96daacba22a463f7fe8fc8eb"
+    },
+    {
+      name: "Rogue",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/76/Icon_Rogue_64.png?version=29e843cbc7d2b116db40358408ba9b7d"
+    },
+    {
+      name: "Druid",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/8/8d/Icon_Druid_64.png?version=c5cdf27e1eb9a22d69317735160765d2"
+    }
   ];
-
-  classListHandler = async _class => {
-    await this.props.dispatch(getCardsByClass(_class));
+  classListHandler = _class => {
+    this.props.setFilter("playerClass", _class);
   };
 
   factionList = ["Horde", "Alliance", "Neutral"];
-
-  factionListHandler = async faction => {
-    await this.props.dispatch(getCardsByFaction(faction));
+  factionListHandler = faction => {
+    this.props.setFilter("faction", faction);
   };
 
   raceList = ["Demon", "Dragon", "Mech", "Murloc", "Beast", "Pirate", "Totem"];
 
-  raceListHandler = async race => {
-    await this.props.dispatch(getCardsByRace(race));
+  raceListHandler =  race => {
+    this.props.setFilter("race", race);
   };
 
   typeList = [
@@ -93,8 +119,8 @@ class Sidebar extends React.Component {
     "Hero Power"
   ];
 
-  typeListHandler = async type => {
-    await this.props.dispatch(getCardsByType(type));
+  typeListHandler =  type => {
+    this.props.setFilter("type", type);
   };
 
   render() {
@@ -108,9 +134,10 @@ class Sidebar extends React.Component {
           <div>
             <div
               className="sidebar-buttons"
-              onClick={() => this.props.dispatch(getAllCards())}
+              //reset filter
+              onClick={() => this.props.resetFilter()}
             >
-              <p>All Cards</p>
+              <p>Reset</p>
             </div>
 
             <Accordion>
@@ -118,28 +145,36 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="0">
                 <React.Fragment>
                   {this.setList.map((set, index) => (
-                    <div
+                    <button
                       key={index}
                       className="sidebar-innerbuttons"
                       onClick={() => this.setListHandler(set)}
                     >
-                      <p>{set}</p>
-                    </div>
+                      {set}
+                    </button>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>
 
               <CustomToggle eventKey="1">Classes</CustomToggle>
-              <Accordion.Collapse eventKey="1">
+              <Accordion.Collapse eventKey="1" style={{ marginLeft: 15 }}>
                 <React.Fragment>
                   {this.classList.map((_class, index) => (
-                    <div
+                    // <div
+                    //   key={index}
+                    //   className="sidebar-innerbuttons"
+                    //   onClick={() => this.classListHandler(_class)}
+                    // >
+                    //   <p>{_class}</p>
+                    // </div>
+                    <button
                       key={index}
-                      className="sidebar-innerbuttons"
-                      onClick={() => this.classListHandler(_class)}
+                      className="sidebar-classinnerbuttons"
+                      onClick={() => this.classListHandler(_class.name)}
                     >
-                      <p>{_class}</p>
-                    </div>
+                      {/* {_class} */}
+                      <img src={_class.img} alt={_class.name} />
+                    </button>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>
@@ -148,13 +183,20 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="2">
                 <React.Fragment>
                   {this.factionList.map((faction, index) => (
-                    <div
+                    // <div
+                    //   key={index}
+                    //   className="sidebar-innerbuttons"
+                    //   onClick={() => this.factionListHandler(faction)}
+                    // >
+                    //   <p>{faction}</p>
+                    // </div>
+                    <button
                       key={index}
                       className="sidebar-innerbuttons"
                       onClick={() => this.factionListHandler(faction)}
                     >
-                      <p>{faction}</p>
-                    </div>
+                      {faction}
+                    </button>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>
@@ -163,13 +205,20 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="3">
                 <React.Fragment>
                   {this.raceList.map((race, index) => (
-                    <div
+                    // <div
+                    //   key={index}
+                    //   className="sidebar-innerbuttons"
+                    //   onClick={() => this.raceListHandler(race)}
+                    // >
+                    //   <p>{race}</p>
+                    // </div>
+                    <button
                       key={index}
                       className="sidebar-innerbuttons"
                       onClick={() => this.raceListHandler(race)}
                     >
-                      <p>{race}</p>
-                    </div>
+                      {race}
+                    </button>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>
@@ -178,13 +227,20 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="4">
                 <React.Fragment>
                   {this.typeList.map((type, index) => (
-                    <div
+                    // <div
+                    //   key={index}
+                    //   className="sidebar-innerbuttons"
+                    //   onClick={() => this.typeListHandler(type)}
+                    // >
+                    //   <p>{type}</p>
+                    // </div>
+                    <button
                       key={index}
                       className="sidebar-innerbuttons"
                       onClick={() => this.typeListHandler(type)}
                     >
-                      <p>{type}</p>
-                    </div>
+                      {type}
+                    </button>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>

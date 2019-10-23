@@ -8,10 +8,12 @@ const header = {
   }
 };
 
-export const getAllCards = () => {
+export const getAllCards = (query) => {
   return {
     type: "GET_ALL_CARDS",
-    payload: Axios.get(`${url}/cards/`, header)
+    // payload: Axios.get(`${url}/cards/`, header)
+    payload: Axios.get(`http://localhost:5000/api/cards?page=${query}`)
+
   };
 };
 
@@ -49,4 +51,18 @@ export const getCardsByType = type => {
     payload: Axios.get(`${url}/cards/types/${type}`, header)
   };
 };
-// https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/classes/
+
+export const getCardsByRarity = rarity => {
+  return {
+    type: "GET_CARDS_BY_RARITY",
+    payload: Axios.get(`${url}/cards/qualities/${rarity}`, header)
+  };
+};
+
+export const getCardById = id => {
+  return {
+    type: "GET_CARD_BY_ID",
+    payload: Axios.get(`${url}/cards/${id}`, header)
+  };
+};
+//  https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/alakir

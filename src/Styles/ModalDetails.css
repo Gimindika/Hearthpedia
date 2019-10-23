@@ -1,0 +1,14 @@
+.modal-parent {
+  margin: auto auto;
+  width: 60vw;
+  height: 80vh;
+}
+
+.modal-container {
+  background-image: url("https://s3.amazonaws.com/user-media.venngage.com/299799-53374269481033ba23118a23eb394d20.jpg");
+  background-repeat: no-repeat;
+  object-fit: fill;
+
+  width: 55vw;
+  height: 80vh;
+}
