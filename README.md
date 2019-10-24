@@ -15,9 +15,9 @@
 Backend server with node & express.js : https://github.com/Gimindika/Hearthpedia-backend.git
 
 ## Introduction
-Hearthpedia is a web app card database for Hearthstone, a giant TCG by Blizzard 
-Providing several filter and search methods for cards
-Providing card detail information
+<p>Hearthpedia is a web app card database for Hearthstone, a giant TCG by Blizzard</p> 
+<p>Providing several filter and search methods for cards</p>
+<p>Providing card detail information</p>
 
 ## Requirements
   - NPM (Node Package Manager)
