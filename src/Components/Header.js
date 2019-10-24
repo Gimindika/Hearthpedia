@@ -6,14 +6,22 @@ import { connect } from "react-redux";
 
 import { DebounceInput } from "react-debounce-input";
 
+import Modal from "../Components/LoginModal";
+
 class Header extends React.Component {
   state = {
+    modal: false,
+
     search: ""
   };
 
-  // inputHandler = (name, value) => {
-  //   this.setState(() => ({ [name]: value }));
-  // };
+  switchModal = () => {
+    if (this.state.modal) {
+      this.setState({ modal: false });
+    } else {
+      this.setState({ modal: true });
+    }
+  };
 
   nameHandler = name => {
     if (!this.props.isLoading) {
@@ -166,12 +174,14 @@ class Header extends React.Component {
             </Dropdown>
           </Col>
 
-          <Col></Col>
-
-          <Col className="col-lg-1 login">
-            {/* <button className="login-button">LogIn</button> */}
+          <Col className="login">
+            <button className="login-button" onClick={() => this.switchModal()}>
+              Log In
+            </button>
           </Col>
         </Row>
+
+        <Modal modalState={this.state.modal} switchModal={this.switchModal} />
       </React.Fragment>
     );
   }

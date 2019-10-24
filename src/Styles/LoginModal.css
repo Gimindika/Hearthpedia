@@ -1,0 +1,60 @@
+.modal-parent {
+  margin: auto auto;
+  /* width: 60vw;
+    height: 80vh; */
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.modal-container {
+  background-image: url("https://s3.amazonaws.com/user-media.venngage.com/299799-53374269481033ba23118a23eb394d20.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 875px;
+  height: 700px;
+
+  display: flex;
+  flex-direction: row;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.login-mainrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-rowinput {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-self: center;
+  margin-left: 15%;
+}
+
+.login-collabel {
+  width: 1000px;
+  padding: 0px;
+  margin: auto;
+}
+
+.login-label {
+  width: 500px;
+  padding: 0px;
+  margin: auto;
+}
+
+.login-button {
+    border-color: maroon;
+    width: 140px;
+  }
+
+
+input {
+  width: 50%;
+  border-radius: 10px;
+  padding-left: 10px;
+}

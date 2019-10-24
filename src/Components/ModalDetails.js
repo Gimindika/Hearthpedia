@@ -257,7 +257,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://i.imgur.com/4510BxO.jpg"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -268,7 +268,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/c/ce/The_Witchwood_banner.jpg?version=66a0f7dba9f229ea108bae61cf8b2cab"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -279,7 +279,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/3/32/The_Boomsday_Project_banner.jpg?version=4bfa317b6611e23df697f4bc825c3b15"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -290,7 +290,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2a/Rastakhan%27s_Rumble_banner.jpg?version=46a25a6e19651711cc26fe3e67796cae"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -301,7 +301,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/e/e0/Curse_of_Naxxramas_banner.jpg?version=94019550ab1028450bfa7642183fafea"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -312,7 +312,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/71/Goblins_vs_Gnomes_banner.jpg?version=b0c8a30fc069660602b41c4b07656436"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -323,7 +323,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2f/Blackrock_Mountain_banner.jpg?version=88627f9153ecb73c96fd066028921d13"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -334,7 +334,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/5/58/The_Grand_Tournament.png?version=896ca984dfb1c5cc8614abd801715c27"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -345,7 +345,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/6/66/The_League_of_Explorers_banner.jpg?version=4fea093aa5307a303143ec28fad0ccf7"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -356,7 +356,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/8/8c/Whispers_of_the_Old_Gods_banner.png?version=a23fd64d3d34160a98b79b4542c42641"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -367,7 +367,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/7f/One_Night_in_Karazhan_banner.jpg?version=cb7b0775ce04d1b6d391278ceead4fcf"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -378,7 +378,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/c/c7/Mean_Streets_of_Gadgetzan_banner2.jpg?version=dad72775a5d5d7abbf23c479dee88345"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -389,7 +389,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/d/dc/Journey_to_Un%27Goro_banner2.png?version=fef60aa7c0c1fdd8ab8cb0fd76c414a7"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -400,7 +400,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/71/Knights_of_the_Frozen_Throne_banner.jpg?version=2623158fc38fe4f71acb5a567c233aa6"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -411,7 +411,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/5/51/Kobolds_and_Catacombs_banner.jpg?version=c4cfe4c9606b22c7915848adfb88cd43"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -422,7 +422,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/9/94/Rise_of_Shadows_banner.jpg?version=c7d26fde94140ae7e905735e46091b8e"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -433,7 +433,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2f/Saviors_of_Uldum_banner.jpg?version=f4cf525be2e3541d7969c27442033c01"
                             alt={this.props.selectedCard.cardSet}
                           />
@@ -444,7 +444,7 @@ class ModalDetails extends React.Component {
                       return (
                         <p>
                           <img
-                            style={{ height: 50 }}
+                            className="details-setbanner"
                             src="https://i.imgur.com/4510BxO.jpg"
                             alt={this.props.selectedCard.cardSet}
                           />
