@@ -1,4 +1,4 @@
-<h1 align="center">Clone Brodo Website</h1>
+<h1 align="center">Hearthpedia Web App</h1>
 
 <p align="center">
   <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/home.png" width="450"/>
