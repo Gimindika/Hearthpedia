@@ -18,6 +18,7 @@
   flex-direction: row;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
+  font-weight: 500;
 }
 
 .image-container{
@@ -27,7 +28,7 @@
 }
 
 .details-container{
-  padding-top: 20px;
+  padding-top: 50px;
   width:500px;
   line-height: 1.25;
 }
@@ -46,4 +47,6 @@
 
 .details-artist{
   text-align: end;
+  font-weight: 600;
+  font-size: 22px;
 }

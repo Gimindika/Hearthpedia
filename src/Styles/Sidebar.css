@@ -69,9 +69,14 @@
   border-radius: 5px;
   background-color: rgb(247, 221, 188);
   border: 3px solid burlywood;
-
 }
 
 .sidebar-classinnerbuttons:hover {
   background-color: maroon;
+}
+
+.sidebar-setinnerbuttons {
+  height: 50px;
+  width: 130px;
+  margin-left: 5px;
 }

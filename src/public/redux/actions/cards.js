@@ -1,5 +1,8 @@
 import Axios from "axios";
-const url = "https://omgvamp-hearthstone-v1.p.rapidapi.com/";
+const url = "http://54.235.224.136:4000"
+const hsAPIUrl = "https://omgvamp-hearthstone-v1.p.rapidapi.com/";
+
+// const localhostUrl = "http://localhost:4000"
 
 const header = {
   headers: {
@@ -11,16 +14,15 @@ const header = {
 export const getAllCards = (query) => {
   return {
     type: "GET_ALL_CARDS",
-    // payload: Axios.get(`${url}/cards/`, header)
-    payload: Axios.get(`http://54.235.224.136:4000/api/cards?page=${query}`)
-
+    payload: Axios.get(`${url}/api/cards?page=${query}`)
+    // payload: Axios.get(`${localhostUrl}/api/cards?page=${query}`)
   };
 };
 
 export const getCardById = id => {
   return {
     type: "GET_CARD_BY_ID",
-    payload: Axios.get(`${url}/cards/${id}`, header)
+    payload: Axios.get(`${hsAPIUrl}/cards/${id}`, header)
   };
 };
 //  https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/alakir

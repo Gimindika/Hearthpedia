@@ -23,28 +23,91 @@ function CustomToggle({ children, eventKey }) {
 
 class Sidebar extends React.Component {
   setList = [
-    "Basic",
-    "Classic",
-    "The Witchwood",
-    "The Boomsday Project",
-    "Rastakhan's Rumble",
+    {
+      name: "Basic",
+      img: "http://3rd-strike.com/wp-content/uploads/2016/02/hearthstone-banner.jpg"
+    },
+    {
+      name: "Classic",
+      img: "https://i.imgur.com/4510BxO.jpg"
+    },
+    {
+      name: "The Witchwood",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/c/ce/The_Witchwood_banner.jpg?version=66a0f7dba9f229ea108bae61cf8b2cab"
+    },
+    {
+      name: "The Boomsday Project",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/3/32/The_Boomsday_Project_banner.jpg?version=4bfa317b6611e23df697f4bc825c3b15"
+    },
+    {
+      name: "Rastakhan's Rumble",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2a/Rastakhan%27s_Rumble_banner.jpg?version=46a25a6e19651711cc26fe3e67796cae"
+    },
+    {
+      name: "Naxxramas",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/e/e0/Curse_of_Naxxramas_banner.jpg?version=94019550ab1028450bfa7642183fafea"
+    },
     // "Rise of Shadows",
     // "Saviors of Uldum",
-    "Naxxramas",
-    "Goblins vs Gnomes",
-    "Blackrock Mountain",
-    "The Grand Tournament",
-    "The League of Explorers",
-    "Whispers of the Old Gods",
-    "One Night in Karazhan",
-    "Mean Streets of Gadgetzan",
-    "Hall of Fame",
-    "Journey to Un'Goro",
-    "Knights of the Frozen Throne",
-    "Kobolds & Catacombs"
+    {
+      name: "Goblins vs Gnomes",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/71/Goblins_vs_Gnomes_banner.jpg?version=b0c8a30fc069660602b41c4b07656436"
+    },
+    {
+      name: "Blackrock Mountain",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/2/2f/Blackrock_Mountain_banner.jpg?version=88627f9153ecb73c96fd066028921d13"
+    },
+    {
+      name: "The Grand Tournament",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/5/58/The_Grand_Tournament.png?version=896ca984dfb1c5cc8614abd801715c27"
+    },
+    {
+      name: "The League of Explorers",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/6/66/The_League_of_Explorers_banner.jpg?version=4fea093aa5307a303143ec28fad0ccf7"
+    },
+    {
+      name: "Whispers of the Old Gods",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/8/8c/Whispers_of_the_Old_Gods_banner.png?version=a23fd64d3d34160a98b79b4542c42641"
+    },
+    {
+      name: "One Night in Karazhan",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/7f/One_Night_in_Karazhan_banner.jpg?version=cb7b0775ce04d1b6d391278ceead4fcf"
+    },
+    {
+      name: "Mean Streets of Gadgetzan",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/c/c7/Mean_Streets_of_Gadgetzan_banner2.jpg?version=dad72775a5d5d7abbf23c479dee88345"
+    },
+    {
+      name: "Journey to Un'Goro",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/d/dc/Journey_to_Un%27Goro_banner2.png?version=fef60aa7c0c1fdd8ab8cb0fd76c414a7"
+    },
+    {
+      name: "Knights of the Frozen Throne",
+      img:
+        "https://gamepedia.cursecdn.com/hearthstone_gamepedia/7/71/Knights_of_the_Frozen_Throne_banner.jpg?version=2623158fc38fe4f71acb5a567c233aa6"
+    },
+    {
+      name: "Kobolds & Catacombs",
+      img:
+        " https://gamepedia.cursecdn.com/hearthstone_gamepedia/5/51/Kobolds_and_Catacombs_banner.jpg?version=c4cfe4c9606b22c7915848adfb88cd43"
+    }
+
+    // "Hall of Fame",
   ];
 
-  setListHandler =  set => {
+  setListHandler = set => {
     this.props.setFilter("cardSet", set);
   };
 
@@ -106,7 +169,7 @@ class Sidebar extends React.Component {
 
   raceList = ["Demon", "Dragon", "Mech", "Murloc", "Beast", "Pirate", "Totem"];
 
-  raceListHandler =  race => {
+  raceListHandler = race => {
     this.props.setFilter("race", race);
   };
 
@@ -119,7 +182,7 @@ class Sidebar extends React.Component {
     "Hero Power"
   ];
 
-  typeListHandler =  type => {
+  typeListHandler = type => {
     this.props.setFilter("type", type);
   };
 
@@ -145,13 +208,28 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="0">
                 <React.Fragment>
                   {this.setList.map((set, index) => (
-                    <button
-                      key={index}
-                      className="sidebar-innerbuttons"
-                      onClick={() => this.setListHandler(set)}
-                    >
-                      {set}
-                    </button>
+                    // <button
+                    //   key={index}
+                    //   className="sidebar-innerbuttons"
+                    //   onClick={() => this.setListHandler(set)}
+                    // >
+                    //   {set}
+                    // </button>
+                    //
+                    // <button
+                    //   key={index}
+                    //   className="sidebar-setinnerbuttons"
+                    //   onClick={() => this.setListHandler(set.name)}
+                    // >
+                    <React.Fragment key={index}>
+                      <img
+                        src={set.img}
+                        alt={set.name}
+                        className="sidebar-setinnerbuttons"
+                        onClick={() => this.setListHandler(set.name)}
+                      />
+                      {/* </button> */}
+                    </React.Fragment>
                   ))}
                 </React.Fragment>
               </Accordion.Collapse>
@@ -160,13 +238,6 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="1" style={{ marginLeft: 15 }}>
                 <React.Fragment>
                   {this.classList.map((_class, index) => (
-                    // <div
-                    //   key={index}
-                    //   className="sidebar-innerbuttons"
-                    //   onClick={() => this.classListHandler(_class)}
-                    // >
-                    //   <p>{_class}</p>
-                    // </div>
                     <button
                       key={index}
                       className="sidebar-classinnerbuttons"
@@ -183,13 +254,6 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="2">
                 <React.Fragment>
                   {this.factionList.map((faction, index) => (
-                    // <div
-                    //   key={index}
-                    //   className="sidebar-innerbuttons"
-                    //   onClick={() => this.factionListHandler(faction)}
-                    // >
-                    //   <p>{faction}</p>
-                    // </div>
                     <button
                       key={index}
                       className="sidebar-innerbuttons"
@@ -205,13 +269,6 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="3">
                 <React.Fragment>
                   {this.raceList.map((race, index) => (
-                    // <div
-                    //   key={index}
-                    //   className="sidebar-innerbuttons"
-                    //   onClick={() => this.raceListHandler(race)}
-                    // >
-                    //   <p>{race}</p>
-                    // </div>
                     <button
                       key={index}
                       className="sidebar-innerbuttons"
@@ -227,13 +284,6 @@ class Sidebar extends React.Component {
               <Accordion.Collapse eventKey="4">
                 <React.Fragment>
                   {this.typeList.map((type, index) => (
-                    // <div
-                    //   key={index}
-                    //   className="sidebar-innerbuttons"
-                    //   onClick={() => this.typeListHandler(type)}
-                    // >
-                    //   <p>{type}</p>
-                    // </div>
                     <button
                       key={index}
                       className="sidebar-innerbuttons"

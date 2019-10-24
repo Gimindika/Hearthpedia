@@ -47,7 +47,7 @@ class App extends React.Component {
     let query = "" + this.state.page;
     await this.props.dispatch(getAllCards(query));
 
-    await this.props.dispatch(getCardById("EX1_572"));
+    // await this.props.dispatch(getCardById("EX1_572"));
   };
 
   resetFilter = async () => {
