@@ -27,7 +27,7 @@ express JS (https://github.com/Gimindika/Hearthpedia-backend.git)
   <p align="center">
     <span>
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/home.png" width="400px" />&nbsp;&nbsp;&nbsp;
-      <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/details.png" width="400px" />&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/loading.png" width="400px" />&nbsp;&nbsp;&nbsp;
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/class.png" width="400px" />&nbsp;&nbsp;&nbsp;
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/sets.png" width="400px" />&nbsp;&nbsp;&nbsp;
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/rarity.png" width="400px" />&nbsp;&nbsp;&nbsp;
@@ -43,7 +43,7 @@ express JS (https://github.com/Gimindika/Hearthpedia-backend.git)
   
   <p align="center">
     <span>
-       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/loading.png" width="800px" />
+       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/details.png" width="800px" />
     </span>
   </p>
  
