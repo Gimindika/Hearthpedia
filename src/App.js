@@ -1,14 +1,25 @@
 import React from "react";
 import { Row, Col, Spinner } from "react-bootstrap";
 import "./App.css";
-
 import { connect } from "react-redux";
 import { getAllCards, getCardById } from "./public/redux/actions/cards";
-
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
-
 import Modal from "./Components/ModalDetails";
+import firebase from 'firebase';
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyClDtVDi5pvPMlvNpvZ4JfF_0zQCwBed1w",
+  authDomain: "hearthpedia-9d536.firebaseapp.com",
+  databaseURL: "https://hearthpedia-9d536.firebaseio.com",
+  projectId: "hearthpedia-9d536",
+  storageBucket: "hearthpedia-9d536.appspot.com",
+  messagingSenderId: "1057823690061",
+  appId: "1:1057823690061:web:e65a87854a33533c077b04"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 class App extends React.Component {
   state = {

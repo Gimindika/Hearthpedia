@@ -11,8 +11,12 @@ import Modal from "../Components/LoginModal";
 class Header extends React.Component {
   state = {
     modal: false,
-
+    userLoggedIn: false,
     search: ""
+  };
+
+  userLoggedIn = value => {
+    this.setState({ userLoggedIn: value });
   };
 
   switchModal = () => {
@@ -175,13 +179,24 @@ class Header extends React.Component {
           </Col>
 
           <Col className="login">
-            <button className="login-button" onClick={() => this.switchModal()}>
-              Log In
-            </button>
+            {this.state.userLoggedIn === false ? (
+              <button
+                className="login-button"
+                onClick={() => this.switchModal()}
+              >
+                Log In
+              </button>
+            ) : (
+              <button className="login-button">Log Out</button>
+            )}
           </Col>
         </Row>
 
-        <Modal modalState={this.state.modal} switchModal={this.switchModal} />
+        <Modal
+          modalState={this.state.modal}
+          switchModal={this.switchModal}
+          userLoggedIn={this.userLoggedIn}
+        />
       </React.Fragment>
     );
   }
