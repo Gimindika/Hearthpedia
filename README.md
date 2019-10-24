@@ -37,8 +37,14 @@ express JS (https://github.com/Gimindika/Hearthpedia-backend.git)
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/faction.png" width="400px" />&nbsp;&nbsp;&nbsp;
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/race.png" width="400px" />&nbsp;&nbsp;&nbsp;
       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/type.png" width="400px" />&nbsp;&nbsp;&nbsp;
-      <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/search.png" width="400px" />&nbsp;&nbsp;&nbsp;
-      <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/loading.png" width="400px" />&nbsp;&nbsp;&nbsp;
+      <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/search.png" width="400px" />
     </span>   
   </p>
+  
+  <p align="center">
+    <span>
+       <img src="https://github.com/Gimindika/Hearthpedia/blob/master/screenshots/loading.png" width="800px" />
+    </span>
+  </p>
+ 
 
