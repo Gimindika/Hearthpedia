@@ -22,6 +22,11 @@ Backend server with node & express.js : https://github.com/Gimindika/Hearthpedia
 ## Requirements
   - NPM (Node Package Manager)
   - React-JS
+  
+## Installation
+  - Clone the git repository for this project
+  - Get into the project directory with terminal/command prompt
+  - Run command : npm start
  
 ## Screenshot
   <p align="center">
