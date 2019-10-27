@@ -10,18 +10,26 @@
   <img src="https://img.shields.io/badge/ReactJS-16.10-blue.svg?style=flat-square" alt="npm version">
 </a>
 
-
-## Related Project
-Backend server with node & express.js : https://github.com/Gimindika/Hearthpedia-backend.git
-
 ## Introduction
 <p>Hearthpedia is a web app card database for Hearthstone, a giant TCG by Blizzard</p> 
-<p>Providing several filter and search methods for cards</p>
 <p>Providing card detail information</p>
+<p>Providing several filter and search methods for cards</p>
+
+## Filter & Search : 
+  - By Card Name
+  - By Card Set
+  - By Attack
+  - By Health
+  - By Cost
+  - By Class
+  - By Faction
+  - By Type
+  - By Race
 
 ## Requirements
   - NPM (Node Package Manager)
   - React-JS
+  - Running backend : https://github.com/Gimindika/Hearthpedia-backend.git
   
 ## Installation
   - Clone the git repository for this project
